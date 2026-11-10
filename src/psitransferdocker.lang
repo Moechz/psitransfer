@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "psitransferdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[zh-cn]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "临时文件中转站，生成上传/下载链接，过期自动清理。"
+release_note = "1. First release."
+important    = "首次使用请打开网页完成初始化。数据保存在 DockerAppData/psitransferdocker，重启和升级不会丢失。容器以 uid 1000 运行，挂载目录需对该用户可读。需要 DockerEngine；Docker Hub 不可达时先配置镜像加速。卸载并删除数据前请备份。局域网内为 HTTP。"
+
+[zh-hk]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "临时文件中转站，生成上传/下载链接，过期自动清理。"
+release_note = "1. First release."
+important    = "首次使用請開啟網頁完成初始化。資料保存在 DockerAppData/psitransferdocker，重新啟動和升級不會遺失。容器以 uid 1000 運行，掛載目錄需對該使用者可讀。需要 DockerEngine；Docker Hub 不可達時先設定鏡像加速。解除安裝並刪除資料前請備份。區域網路內為 HTTP。"
+
+[fr-fr]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[de-de]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[it-it]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[es-es]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[hu-hu]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ja-jp]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ko-kr]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[pl-pl]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ru-ru]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[tr-tr]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[pt-pt]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ar-sa]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[cs-cz]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[he-il]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[id-id]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[nb-no]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[nl-nl]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[sv-se]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[th-th]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[vi-vn]
+name         = "Psitransfer"
+auth         = "Moechz"
+version      = "@@VERSION@@"
+descript     = "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+

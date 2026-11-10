@@ -1,0 +1,90 @@
+{
+  "app_id": "psitransferdocker",
+  "title": "Psitransfer",
+  "image": "psitrax/psitransfer:v2.4.1",
+  "repo_name": "psitransfer",
+  "mode": "plain",
+  "container_port": 3000,
+  "category": [
+    "Utilities"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/psitransferdocker/data",
+      "container": "/data"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "Moechz",
+  "upstream_url": "",
+  "upstream_license": "",
+  "descript": "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon.",
+  "release_note": "1. First release.",
+  "important": "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN.",
+  "probe": {
+    "user_in_image": "node",
+    "entrypoint": [
+      "docker-entrypoint.sh"
+    ],
+    "cmd": [
+      "node",
+      "app.js"
+    ],
+    "exposed_ports": [
+      3000
+    ],
+    "declared_volumes": [
+      "/data"
+    ],
+    "image_healthcheck": [],
+    "digest": "docker.1panel.live/psitrax/psitransfer@sha256:8fc64c1cac1142a0fc0b6be3874e96bd2a65385c5e0622eb91d3c599bcf35fa8",
+    "architecture": "x86_64",
+    "platforms": [],
+    "http_client_in_image": "wget",
+    "trial_run": {
+      "ok": true,
+      "http_code": "200",
+      "state": "running",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "PsiTransfer listening on http://0.0.0.0:3000\n2026-11-10T02:40:20.457Z GET / 200 5.067 172.17.0.1",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {}
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "wget -q -O /dev/null http://127.0.0.1:3000/ || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "psitransferdocker",
+  "github_repo": "psitransfer",
+  "upstream_version": "2.4.1",
+  "release_tag_prefix": "v",
+  "version": "2.4.1-1",
+  "help": "https://github.com/Moechz/psitransfer/issues",
+  "official": "https://github.com/Moechz/psitransfer/issues",
+  "license": "see upstream",
+  "docker_socket": false,
+  "group_add": [],
+  "platforms": [
+    "x86_64",
+    "aarch64"
+  ],
+  "translations": {
+    "zh-cn": {
+      "descript": "临时文件中转站，生成上传/下载链接，过期自动清理。",
+      "important": "首次使用请打开网页完成初始化。数据保存在 DockerAppData/psitransferdocker，重启和升级不会丢失。容器以 uid 1000 运行，挂载目录需对该用户可读。需要 DockerEngine；Docker Hub 不可达时先配置镜像加速。卸载并删除数据前请备份。局域网内为 HTTP。"
+    },
+    "zh-hk": {
+      "descript": "临时文件中转站，生成上传/下载链接，过期自动清理。",
+      "important": "首次使用請開啟網頁完成初始化。資料保存在 DockerAppData/psitransferdocker，重新啟動和升級不會遺失。容器以 uid 1000 運行，掛載目錄需對該使用者可讀。需要 DockerEngine；Docker Hub 不可達時先設定鏡像加速。解除安裝並刪除資料前請備份。區域網路內為 HTTP。"
+    }
+  },
+  "host_port": 8045
+}
