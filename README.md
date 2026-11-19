@@ -27,18 +27,18 @@ Psitransfer on TOS 7 through the App Center:
 
 ## Privacy
 
-This application runs entirely on your NAS. **The developer does not collect, receive or
-have access to any data processed by the application.** There is no telemetry, no analytics
-and no account.
+This application runs entirely on your NAS. **The developer does not collect, receive or have
+access to any file you transfer or to any data the application processes.** There is no
+telemetry, no analytics, no crash reporting and no update check.
 
 | Topic | Detail |
 |---|---|
-| Data processed | The application's configuration, database, caches and logs, plus any files you create with it. |
+| Data processed | The files you transfer with their metadata (size, upload time, retention, one-time flag, optional bucket password) and the access log (timestamp, method, URL, status, response time, remote IP). No database, no accounts. |
 | Where it is stored | The application data folder (`/Volume1/DockerAppData/psitransferdocker/`) on your NAS. Nothing is uploaded to the developer. |
-| Retention period | Until **you** delete it. Logs are rotated or size-limited by the application; uninstalling keeps the data unless you tick “delete data”. |
-| Your rights | **Access / export**: copy the data folder. **Correct**: change the values in the web UI. **Delete**: uninstall with “delete data”, or remove the folder after stopping the container. |
-| Deletion channel | Delete the folder yourself, or email **moechz@163.com** (answered within 30 days). |
-| Security measures | Container runs as uid 1000 (never root), no `privileged`, no host network, no `cap_add`, no Docker socket, one published port; image tag pinned and refreshed on upstream fixes. |
+| Retention period | **The app deletes transfers by itself**: the retention chosen per upload (default **7 days**), a hard **75-day** maximum age, and one-time links after the first download. Logs follow the DockerEngine rotation. Uninstalling keeps the data unless you tick “delete data”. |
+| Your rights | **Access**: the uploader uses the share link; the owner reads the data folder or enables `/admin` (`adminPass`). **Correct**: re-upload (uploads are immutable snapshots). **Delete**: share-link delete, admin page delete, or remove the bucket folder. **Restrict**: `uploadPass`, `requireBucketPassword`, retention, LAN-only or TLS proxy. |
+| Deletion channel | Self-service: share-link delete, admin page, or delete `/Volume1/DockerAppData/psitransferdocker/data/<bucket-id>` (immediate, complete). Questions or lost links: **moechz@163.com** (answered within 30 days). |
+| Security measures | uid 1000 (never root), no `privileged`, no host network, no `cap_add`, no Docker socket, one published port; image pinned to `psitrax/psitransfer:v2.4.1`. The UI is plain HTTP and `/admin` is **off by default** (`adminPass`); set `adminPass`/`uploadPass` before exposing the port, and use a TLS reverse proxy. |
 | Children | Not directed at children. |
 
 **Full privacy policy:** [PRIVACY.md](PRIVACY.md) —
@@ -47,14 +47,16 @@ and no account.
 
 ## Third-party services (API disclosure)
 
-The developer operates no server in this path. The application contacts only the services
-**you configure**, plus (optionally) an update check and the image registry.
+The developer operates no server in this path, and Psitransfer has no telemetry and no
+automatic update check.
 
 | Service | Endpoint | Data sent | Destination / region |
 |---|---|---|---|
-| Services you configure in the app | the address you enter | only the data that feature needs | normally your own LAN or the provider you chose |
-| Update check (if enabled) | the upstream project's release feed | current version string | GitHub, US |
+| Uploader's browser → the app | `http://<NAS-IP>:8045` | the uploaded file, its name/size, chosen retention | your own NAS / LAN |
+| Download link you share | same address, `/download/<id>` | the file, to whoever holds the link | your own NAS |
 | Image pull | `registry-1.docker.io` or your registry mirror | anonymous pull | Docker Hub, US / your mirror |
+| Optional webhooks you configure (`fileUploadedWebhook` / `fileDownloadedWebhook`) | the URL you enter | file name, size, bucket id, client IP | the endpoint you chose |
+| Update check | none | — | — |
 
 See `PRIVACY.md` §6 for the full table. Disable any integration in the app's settings if you
 do not want it.

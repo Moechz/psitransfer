@@ -18,11 +18,11 @@
     "TZ": "Asia/Shanghai"
   },
   "auth": "Moechz",
-  "upstream_url": "",
-  "upstream_license": "",
-  "descript": "Psitransfer packaged for TerraMaster TOS 7. It runs the official Docker Hub image inside a container on your NAS, keeps all of its data in an application data folder (so it survives restarts and updates), and is opened from its desktop icon.",
-  "release_note": "1. First release.",
-  "important": "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/psitransferdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN.",
+  "upstream_url": "https://github.com/psi-4ward/psitransfer",
+  "upstream_license": "BSD-2-Clause",
+  "descript": "Psitransfer packaged for TerraMaster TOS 7: a self-hosted file-transfer service. Create an upload bucket, share the link and the other side uploads or downloads files in the browser - with per-transfer retention (default 7 days, 75-day cap), one-time downloads and optional passwords. The official Docker Hub image runs unmodified as a non-root container and all data stays in the application data folder.",
+  "release_note": "1. Privacy policy published (PRIVACY.md) and linked from the app's Help field; the access/correct/delete channel is documented there. 2. Store text corrected: how transfers work, the default 7-day retention with a 75-day cap, and the admin/upload passwords. 3. Re-verified on TOS 7: install, healthy container, one published port, upload and download flow.",
+  "important": "How to use: open the web UI, create a transfer (choose the retention) and share the link. Data lives in DockerAppData/psitransferdocker/data; expired transfers are deleted automatically (7 days by default, 75-day cap), one-time links after the first download. Set adminPass for the /admin page (delete transfers), uploadPass to protect uploads. Privacy policy and data-rights channel: https://github.com/Moechz/psitransfer/blob/main/PRIVACY.md. Plain HTTP - use a TLS proxy; back up data before uninstall.",
   "probe": {
     "user_in_image": "node",
     "entrypoint": [
@@ -66,10 +66,10 @@
   "github_repo": "psitransfer",
   "upstream_version": "2.4.1",
   "release_tag_prefix": "v",
-  "version": "2.4.1-3",
-  "help": "https://github.com/Moechz/psitransfer/issues",
+  "version": "2.4.1-4",
+  "help": "https://github.com/Moechz/psitransfer/blob/main/PRIVACY.md",
   "official": "https://github.com/Moechz/psitransfer/issues",
-  "license": "see upstream",
+  "license": "BSD-2-Clause",
   "docker_socket": false,
   "group_add": [],
   "platforms": [
@@ -78,12 +78,14 @@
   ],
   "translations": {
     "zh-cn": {
-      "descript": "临时文件中转站，生成上传/下载链接，过期自动清理。",
-      "important": "首次使用请打开网页完成初始化。数据保存在 DockerAppData/psitransferdocker，重启和升级不会丢失。容器以 uid 1000 运行，挂载目录需对该用户可读。需要 DockerEngine；Docker Hub 不可达时先配置镜像加速。卸载并删除数据前请备份。局域网内为 HTTP。"
+      "descript": "Psitransfer 是一款自托管的临时文件中转站：创建上传箱、把链接发给对方，对方在浏览器里上传或下载文件；支持按次选择保留期（默认 7 天、上限 75 天）、一次性下载与可选口令。使用 Docker Hub 官方镜像、以非 root 容器运行，所有数据都留在应用数据目录。",
+      "important": "用法：打开网页，创建一次中转（选择保留期）并把链接发给对方。数据在 DockerAppData/psitransferdocker/data；过期中转自动删除（默认 7 天、上限 75 天），一次性链接首次下载后删除。设 adminPass 启用 /admin 页（删除中转），uploadPass 保护上传。隐私政策与数据权利渠道：https://github.com/Moechz/psitransfer/blob/main/PRIVACY.md。纯 HTTP，建议配 TLS 反代；卸载并删数据前先备份。",
+      "release_note": "1. 发布隐私政策（PRIVACY.md）并链接到应用「帮助」入口，其中写明访问/更正/删除渠道。2. 修正商店文案：说明中转流程、默认 7 天保留与 75 天上限、admin/上传口令。3. 真机复测：安装、健康检查、单端口发布、上传下载流程均通过。"
     },
     "zh-hk": {
-      "descript": "临时文件中转站，生成上传/下载链接，过期自动清理。",
-      "important": "首次使用請開啟網頁完成初始化。資料保存在 DockerAppData/psitransferdocker，重新啟動和升級不會遺失。容器以 uid 1000 運行，掛載目錄需對該使用者可讀。需要 DockerEngine；Docker Hub 不可達時先設定鏡像加速。解除安裝並刪除資料前請備份。區域網路內為 HTTP。"
+      "descript": "Psitransfer 是一款自託管的臨時檔案中轉站：建立上傳箱、把連結傳給對方，對方在瀏覽器裡上傳或下載檔案；支援按次選擇保留期（預設 7 天、上限 75 天）、一次性下載與可選密碼。使用 Docker Hub 官方映像、以非 root 容器運行，所有資料都留在應用資料目錄。",
+      "important": "用法：開啟網頁，建立一次中轉（選擇保留期）並把連結傳給對方。資料在 DockerAppData/psitransferdocker/data；過期中轉自動刪除（預設 7 天、上限 75 天），一次性連結首次下載後刪除。設 adminPass 啟用 /admin 頁（刪除中轉），uploadPass 保護上傳。隱私政策與資料權利渠道：https://github.com/Moechz/psitransfer/blob/main/PRIVACY.md。純 HTTP，建議配 TLS 反代；解除安裝並刪資料前先備份。",
+      "release_note": "1. 發佈隱私政策（PRIVACY.md）並連結到應用「說明」入口，其中寫明存取/更正/刪除渠道。2. 修正商店文案：說明中轉流程、預設 7 天保留與 75 天上限、admin/上傳密碼。3. 真機複測：安裝、健康檢查、單埠發佈、上傳下載流程均通過。"
     }
   },
   "host_port": 8045

@@ -5,15 +5,16 @@ the upstream **Psitransfer** project.
 
 ## 1. Upstream application — Psitransfer
 
-- Project: see the container image
-- Licence: **see upstream**
+- Project: <https://github.com/psi-4ward/psitransfer>
+- Licence: **BSD-2-Clause**
 - Relationship: the upstream application is used **unmodified**, inside the container
   image. No upstream source code is redistributed in this package.
 
 ## 2. Container image — psitrax/psitransfer:v2.4.1
 
-- Registry: Docker Hub (`psitrax/psitransfer:v2.4.1`)
-- Maintainer: psitrax
+- Registry: Docker Hub (`psitrax/psitransfer:v2.4.1`), digest
+  `sha256:8fc64c1cac1142a0fc0b6be3874e96bd2a65385c5e0622eb91d3c599bcf35fa8`
+- Maintainer: the Psitransfer project (`psitrax`), built by the upstream release pipeline
 - The image is pulled from Docker Hub at install time and is not redistributed here.
 
 ## 3. Components inside the image
@@ -28,7 +29,7 @@ files by this package.
 The files authored for this package — `docker-compose.yml`, `config.ini`,
 `psitransferdocker.lang`, `psitransferdocker.svg`, `entrypoint.sh` (when present), build scripts and this
 documentation — are released under the same licence as the upstream project where
-required, and otherwise under **GPL-3.0** (see `LICENSE`).
+required, and otherwise under **MIT** (see `LICENSE`).
 
 ## 5. Trademarks
 
